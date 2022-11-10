@@ -3,7 +3,7 @@ package com.company.graphs;
 import java.io.*;
 import java.util.*;
 
-public class ConnectedComponents {
+public class IsConnected {
 
     public  static void getConnectedComponents(int vtces ,boolean visited[] ,ArrayList<Edge>[] graph,ArrayList<ArrayList<Integer>> comps){
 
@@ -61,7 +61,7 @@ public class ConnectedComponents {
         ArrayList<ArrayList<Integer>> comps = new ArrayList<>();
 
         getConnectedComponents(vtces,visited,graph,comps);
-        System.out.println(comps);
+        System.out.println(comps.size()  == 1);
     }
 
 
@@ -69,4 +69,3 @@ public class ConnectedComponents {
 }
 
 
-                        
