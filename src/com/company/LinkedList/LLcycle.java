@@ -54,4 +54,47 @@ public class LLcycle {
             return false;
         }
     }
+
+    /// optimised o(1)
+
+    public class Solution2 {
+
+        static  class ListNode{
+
+            ListNode next;
+            int data;
+
+            public ListNode(ListNode next, int data) {
+                this.next = next;
+                this.data = data;
+            }
+        }
+
+        public boolean hasCycle(ListNode head) {
+
+            if(head == null || head.next == null) return false;
+
+
+
+
+            ListNode slow = head;
+            ListNode  fast = head;
+
+            while(slow != null && fast != null){
+
+                fast = fast.next;
+
+                if(fast != null) fast = fast.next;
+
+                slow = slow.next;
+
+                if(slow == fast) return true;
+
+            }
+
+            return false;
+
+
+        }
+    }
 }
